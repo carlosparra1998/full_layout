@@ -119,19 +119,21 @@ Future<void> main(List<String> args) async {
   });
 
   print('🔧 Copied project');
-  print('🔧 Generating .env and .gitignore files');
-  final templates = await loadRootTemplates();
-  await generateHiddenFiles(
-    targetDir,
-    templates['env']!,
-    templates['gitignore']!,
-  );
+
   print('🔧 Running flutter pub get...\n');
   final result = await Process.run(
     'flutter',
     ['pub', 'get'],
     workingDirectory: Directory(projectName).path,
     runInShell: true,
+  );
+
+  print('🔧 Generating .env and .gitignore files');
+  final templates = await loadRootTemplates();
+  await generateHiddenFiles(
+    targetDir,
+    templates['env']!,
+    templates['gitignore']!,
   );
 
   if (result.exitCode != 0) {
