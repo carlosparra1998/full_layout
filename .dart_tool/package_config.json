@@ -296,7 +296,7 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "full_layout",
+      "name": "flutter_full_layout",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
