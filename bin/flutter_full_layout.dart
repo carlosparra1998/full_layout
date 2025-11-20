@@ -128,14 +128,12 @@ Future<void> main(List<String> args) async {
   );
   print('🔧 Running flutter pub get...\n');
   final isWindows = Platform.isWindows;
-
   final executable = isWindows ? 'cmd.exe' : '/bin/bash';
-  final args =
+  final argsExec =
       isWindows ? ['/c', 'flutter pub get'] : ['-c', 'flutter pub get'];
-
   final result = await Process.run(
     executable,
-    args,
+    argsExec,
     workingDirectory: targetDir.path,
     runInShell: true,
   );
