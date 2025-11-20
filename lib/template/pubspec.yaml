@@ -1,10 +1,9 @@
 name: {{PROJECT_NAME}}
 description: "Generated project"
-publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.10.0
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:

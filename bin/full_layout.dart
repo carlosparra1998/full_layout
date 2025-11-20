@@ -37,7 +37,7 @@ Future<void> main(List<String> args) async {
 
   if (args.isEmpty) {
     print(
-      'Example: full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
+      'Example: flutter_full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
     );
     exit(1);
   }
@@ -48,7 +48,7 @@ Future<void> main(List<String> args) async {
     print('''
 
         Usage:
-          full_layout create <project_name> [options]
+          flutter_full_layout create <project_name> [options]
 
         Commands:
           create          Generate a new Flutter project using the template
@@ -59,7 +59,7 @@ Future<void> main(List<String> args) async {
           -h, --help      Show this help message
 
         Example:
-          full_layout create my_app --package com.mycompany.my_app --name "My App"
+          flutter_full_layout create my_app --package com.mycompany.my_app --name "My App"
     ''');
     exit(0);
   }
@@ -71,7 +71,7 @@ Future<void> main(List<String> args) async {
 
   if (args.length < 2) {
     print(
-      'Example: full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
+      'Example: flutter_full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
     );
     exit(1);
   }

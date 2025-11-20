@@ -32,7 +32,7 @@ First, using the terminal, we will access a directory where we want the project 
 Then we run:
 
 ```bash
-$dart pub global activate full_layout
+$dart pub global activate flutter_full_layout
 ```
 
 ---
@@ -42,7 +42,7 @@ $dart pub global activate full_layout
 Once installed, we can create our project with this command:
 
 ```bash
-$full_layout create my_project --package com.mycompany.my_project --name "My App"
+$flutter_full_layout create my_project --package com.mycompany.my_project --name "My App"
 ```
 
 - --package => optional (default: com.example.<project_name>)

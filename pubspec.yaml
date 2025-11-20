@@ -1,15 +1,13 @@
 name: full_layout
-description: A sample command-line application.
+description: "CLI to generate Flutter projects with a full layout template."
 version: 1.1.0
-# repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.10.0
+  sdk: ">=3.0.0 <4.0.0"
 
 executables:
-  full_layout: # <--- El nombre del comando que se ejecutará en terminal
+  flutter_full_layout:
 
-# Add regular dependencies here.
 dependencies:
   path: ^1.9.0
 
