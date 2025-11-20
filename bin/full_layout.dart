@@ -13,10 +13,6 @@ Future<void> main(List<String> args) async {
   }
 
   final command = args[0];
-  if (command != 'create') {
-    print('❌ Unknown command: $command');
-    exit(1);
-  }
 
   if (command == 'help' || args.contains('--help') || args.contains('-h')) {
     print('''
@@ -36,6 +32,11 @@ Future<void> main(List<String> args) async {
           full_layout create my_app --package com.mycompany.my_app --name "My App"
     ''');
     exit(0);
+  }
+
+  if (command != 'create') {
+    print('❌ Unknown command: $command');
+    exit(1);
   }
 
   if (args.length < 2) {
