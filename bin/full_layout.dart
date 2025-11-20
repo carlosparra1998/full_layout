@@ -94,7 +94,7 @@ Future<void> main(List<String> args) async {
   print('🔧 Copied project');
 
   // ---------- Ejecutar flutter pub get ----------
-  print('⚙️ Running flutter pub get...\n');
+  print('🔧 Running flutter pub get...\n');
   final result = await Process.run(
     'flutter',
     ['pub', 'get'],
