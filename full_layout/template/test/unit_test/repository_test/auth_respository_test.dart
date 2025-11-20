@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/enums/http_call.dart';
-import 'package:full_layout_base/app/repositories/clients/client_response.dart';
-import 'package:full_layout_base/app/repositories/clients/http_client/http_client.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/auth_repository.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/models/auth_session.dart';
+import 'package:{{PROJECT_NAME}}/app/enums/http_call.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/client_response.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/http_client/http_client.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/auth_repository.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/models/auth_session.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockHttpClient extends Mock implements HttpClient {}

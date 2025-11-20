@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:full_layout_base/app/extensions/num.dart';
-import 'package:full_layout_base/app/widgets/app_icon.dart';
+import 'package:{{PROJECT_NAME}}/app/extensions/num.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/app_icon.dart';
 import 'package:sizer/sizer.dart';
-import 'package:full_layout_base/app/style/app_colors.dart';
-import 'package:full_layout_base/app/values/constants.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_colors.dart';
+import 'package:{{PROJECT_NAME}}/app/values/constants.dart';
 
 class AppView extends StatefulWidget {
   final Widget content;

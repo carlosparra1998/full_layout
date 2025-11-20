@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:full_layout_base/l10n/app_localizations.dart';
+import 'package:{{PROJECT_NAME}}/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 

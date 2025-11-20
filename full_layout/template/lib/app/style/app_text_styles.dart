@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:full_layout_base/app/extensions/num.dart';
-import 'package:full_layout_base/app/style/app_colors.dart';
+import 'package:{{PROJECT_NAME}}/app/extensions/num.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_colors.dart';
 
 class AppTextStyles {
   static TextStyle mainStyle = TextStyle(

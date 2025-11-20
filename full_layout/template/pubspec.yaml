@@ -1,5 +1,5 @@
-name: full_layout_base
-description: "A new Flutter project."
+name: {{APP_NAME}}
+description: "Generated project"
 publish_to: 'none'
 version: 0.1.0
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:full_layout_base/app/style/app_colors.dart';
-import 'package:full_layout_base/app/style/app_text_styles.dart';
-import 'package:full_layout_base/app/values/constants.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_colors.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_text_styles.dart';
+import 'package:{{PROJECT_NAME}}/app/values/constants.dart';
 
 class AppButton extends StatelessWidget {
   final String title;

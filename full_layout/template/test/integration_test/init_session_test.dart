@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/enums/http_call.dart';
-import 'package:full_layout_base/app/repositories/clients/client_response.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/models/auth_session.dart';
+import 'package:{{PROJECT_NAME}}/app/enums/http_call.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/client_response.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/models/auth_session.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:mocktail/mocktail.dart';
 

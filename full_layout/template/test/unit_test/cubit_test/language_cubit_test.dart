@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/services/language/language_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/services/language/language_cubit.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

@@ -1,6 +1,6 @@
 import 'package:flag/flag.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
 
 class L10n {
   static final supportedLocales = [const Locale('es'), const Locale('en')];

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/app.dart';
-import 'package:full_layout_base/app/repositories/clients/http_client/http_client.dart';
+import 'package:{{PROJECT_NAME}}/app/app.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/http_client/http_client.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockHttpClient extends Mock implements HttpClient {}

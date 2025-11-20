@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:full_layout_base/app/routes/routes_helper.dart';
-import 'package:full_layout_base/app/services/language/language_cubit.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
-import 'package:full_layout_base/l10n/L10N.dart';
-import 'package:full_layout_base/l10n/app_localizations.dart';
+import 'package:{{PROJECT_NAME}}/app/routes/routes_helper.dart';
+import 'package:{{PROJECT_NAME}}/app/services/language/language_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/l10n/L10N.dart';
+import 'package:{{PROJECT_NAME}}/l10n/app_localizations.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:full_layout_base/app/repositories/clients/http_client/http_client.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/auth_repository.dart';
-import 'package:full_layout_base/app/services/auth/auth_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/http_client/http_client.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/auth_repository.dart';
+import 'package:{{PROJECT_NAME}}/app/services/auth/auth_cubit.dart';
 
 class BaseApp extends StatelessWidget {
   final HttpClient httpClient;

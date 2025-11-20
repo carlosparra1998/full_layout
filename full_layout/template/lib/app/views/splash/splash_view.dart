@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:full_layout_base/app/routes/routes_helper.dart';
-import 'package:full_layout_base/app/services/language/language_cubit.dart';
-import 'package:full_layout_base/app/widgets/app_view.dart';
+import 'package:{{PROJECT_NAME}}/app/routes/routes_helper.dart';
+import 'package:{{PROJECT_NAME}}/app/services/language/language_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/app_view.dart';
 import 'package:get/route_manager.dart';
 
 class SplashView extends StatefulWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:full_layout_base/app/extensions/num.dart';
-import 'package:full_layout_base/app/services/language/language_cubit.dart';
-import 'package:full_layout_base/app/style/app_colors.dart';
-import 'package:full_layout_base/app/style/app_text_styles.dart';
-import 'package:full_layout_base/app/widgets/w.dart';
-import 'package:full_layout_base/l10n/L10N.dart';
+import 'package:{{PROJECT_NAME}}/app/extensions/num.dart';
+import 'package:{{PROJECT_NAME}}/app/services/language/language_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_colors.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_text_styles.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/w.dart';
+import 'package:{{PROJECT_NAME}}/l10n/L10N.dart';
 import 'package:sizer/sizer.dart';
 
 class LanguageDropdown extends StatefulWidget {

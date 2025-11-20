@@ -1,6 +1,6 @@
-import 'package:full_layout_base/app/views/home/home_view.dart';
-import 'package:full_layout_base/app/views/login/login_view.dart';
-import 'package:full_layout_base/app/views/splash/splash_view.dart';
+import 'package:{{PROJECT_NAME}}/app/views/home/home_view.dart';
+import 'package:{{PROJECT_NAME}}/app/views/login/login_view.dart';
+import 'package:{{PROJECT_NAME}}/app/views/splash/splash_view.dart';
 import 'package:get/get.dart';
 
 class RoutesHelper {

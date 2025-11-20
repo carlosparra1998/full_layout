@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/repositories/clients/client_response.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/auth_repository.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/models/auth_session.dart';
-import 'package:full_layout_base/app/services/auth/auth_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/client_response.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/auth_repository.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/models/auth_session.dart';
+import 'package:{{PROJECT_NAME}}/app/services/auth/auth_cubit.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockPostRepository extends Mock implements AuthRepository {}

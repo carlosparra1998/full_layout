@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:full_layout_base/app/style/app_colors.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_colors.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
 
 void showLoader(BuildContext context) {
   showAppDialog(context, const ArcLoader(), barrierDismissible: false);

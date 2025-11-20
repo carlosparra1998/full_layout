@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:full_layout_base/app/style/app_text_styles.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
-import 'package:full_layout_base/app/widgets/app_icon.dart';
-import 'package:full_layout_base/app/widgets/app_view.dart';
-import 'package:full_layout_base/app/widgets/empty_space.dart';
-import 'package:full_layout_base/app/widgets/h.dart';
+import 'package:{{PROJECT_NAME}}/app/style/app_text_styles.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/app_icon.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/app_view.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/empty_space.dart';
+import 'package:{{PROJECT_NAME}}/app/widgets/h.dart';
 import 'package:sizer/sizer.dart';
 
 class HomeView extends StatefulWidget {

@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:full_layout_base/app/enums/http_call.dart';
-import 'package:full_layout_base/app/repositories/clients/client_response.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/models/auth_session.dart';
-import 'package:full_layout_base/app/services/auth/auth_cubit.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/enums/http_call.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/clients/client_response.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/models/auth_session.dart';
+import 'package:{{PROJECT_NAME}}/app/services/auth/auth_cubit.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
 import 'package:provider/provider.dart';
 
 class HttpClient {

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/auth_repository.dart';
-import 'package:full_layout_base/app/repositories/repositories/auth/models/auth_session.dart';
-import 'package:full_layout_base/app/views/login/forms/login_form.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/auth_repository.dart';
+import 'package:{{PROJECT_NAME}}/app/repositories/repositories/auth/models/auth_session.dart';
+import 'package:{{PROJECT_NAME}}/app/views/login/forms/login_form.dart';
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {

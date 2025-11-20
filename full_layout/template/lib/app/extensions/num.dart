@@ -1,4 +1,4 @@
-import 'package:full_layout_base/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
 
 extension NumExtension on num {
   double responsive({num? smallSize, num? largeSize}) =>

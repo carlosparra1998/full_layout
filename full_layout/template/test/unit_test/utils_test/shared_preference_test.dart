@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:full_layout_base/app/utils/general_utils.dart';
+import 'package:{{PROJECT_NAME}}/app/utils/general_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
