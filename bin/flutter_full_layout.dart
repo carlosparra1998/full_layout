@@ -215,8 +215,10 @@ Future<Map<String, String>> loadRootTemplates() async {
 
   final packageRoot = Directory(pkgUri.toFilePath());
 
-  final envFile = File(p.join(packageRoot.path, 'env.template'));
-  final gitignoreFile = File(p.join(packageRoot.path, 'gitignore.template'));
+  final envFile =
+      File(p.normalize(p.join(packageRoot.path, '...', 'env.template')));
+  final gitignoreFile =
+      File(p.normalize(p.join(packageRoot.path, '...', 'gitignore.template')));
 
   final envContent = await envFile.readAsString();
   final gitignoreContent = await gitignoreFile.readAsString();
