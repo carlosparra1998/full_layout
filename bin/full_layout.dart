@@ -5,7 +5,7 @@ import 'package:path/path.dart' as p;
 Future<void> main(List<String> args) async {
   print('🚀 Flutter FULL LAYOUT Template CLI (--help)🚀\n');
 
-  if (args.isEmpty || args.length < 2) {
+  if (args.isEmpty) {
     print(
       'Example: full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
     );
@@ -36,6 +36,13 @@ Future<void> main(List<String> args) async {
           full_layout create my_app --package com.mycompany.my_app --name "My App"
     ''');
     exit(0);
+  }
+
+  if (args.length < 2) {
+    print(
+      'Example: full_layout create <my_app> --package <com.mycompany.my_app> --name <"My App">',
+    );
+    exit(1);
   }
 
   final projectName = args[1].trim().replaceAll(' ', '_').toLowerCase();
