@@ -137,7 +137,8 @@ Future<void> main(List<String> args) async {
     workingDirectory: targetDir.path,
     runInShell: true,
   );
-
+  stdout.write(result.stdout);
+  stderr.write(result.stderr);
   if (result.exitCode != 0) {
     print('❌ Error executing flutter pub get:');
     print(result.stderr);
