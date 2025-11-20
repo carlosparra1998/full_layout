@@ -101,6 +101,9 @@ Future<void> main(List<String> args) async {
 
   final scriptDir = p.dirname(Platform.script.toFilePath());
 
+  print(scriptDir);
+  print(p.normalize(p.join(scriptDir, '..')));
+
   final templateDir = p.normalize(p.join(scriptDir, '..', 'template'));
 
   if (!Directory(templateDir).existsSync()) {
