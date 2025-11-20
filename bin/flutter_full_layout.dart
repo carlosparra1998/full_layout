@@ -100,6 +100,7 @@ Future<void> main(List<String> args) async {
   }
 
   final templateDirPath = await resolveTemplatePath();
+  print(templateDirPath);
   final templateDir = Directory('$templateDirPath/template');
 
   if (!templateDir.existsSync()) {
