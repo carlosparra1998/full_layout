@@ -103,7 +103,7 @@ Future<void> main(List<String> args) async {
 
   print(scriptDir);
   print(p.normalize(p.join(scriptDir, '..')));
-
+  print(p.normalize(p.join(scriptDir, '..', 'template')));
   final templateDir = p.normalize(p.join(scriptDir, '..', 'template'));
 
   if (!Directory(templateDir).existsSync()) {
