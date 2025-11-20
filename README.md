@@ -18,7 +18,7 @@ It will allow the developer to create a base project with CLEAN ARCHITECTURE. In
 - `Route management` with GET
 - Defined styles (text styles and colours)
 - Complete initialiser in Splash Screen
-- `Predefined tests` (unit, integration and widgets) [92% coverage].
+- `Predefined tests` (unit, integration and widgets) [91.8% coverage].
 - A `homemade HTTP client (using DIO)` that provides directly constructed objects/lists, without the need for processing (just indicate the fromJson of a specific class to target in the client).
  
 ## Install and creation
@@ -382,13 +382,19 @@ AppIcon(
 )
 ```
 
-### Detail 6. Test types and examples (92% coverage).
+### Detail 6. Test types and examples (91.8% coverage).
 
 In the layout, we have defined three types of tests so that you can easily use them as a reference.
 
 - `Unit tests`
 - `Integration tests`
 - `Widget tests`
+
+You can generate a coverage lcov file with:
+
+```dart
+$flutter test --coverage
+```
 
 Example of use:
 

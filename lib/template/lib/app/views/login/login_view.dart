@@ -49,6 +49,7 @@ class _LoginViewState extends State<LoginView> {
             LoginForm form = context.read<AuthCubit>().form;
             return AppView(
               floatingIcon: Icons.help,
+              onFloatingPressed: () {},
               appBarWidgets: [
                 EmptySpace(),
                 Text(
