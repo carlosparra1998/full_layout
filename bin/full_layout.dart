@@ -1,16 +1,15 @@
 import 'dart:io';
+import 'package:path/path.dart' as p;
 
-void main(List<String> args) async {
+Future<void> main(List<String> args) async {
   print('🚀 Flutter Template CLI');
 
   if (args.isEmpty || args.length < 2) {
-    print('Uso correcto:');
-    print('full_layout create <project_name> --package com.example.app --name "My App"');
+    print('Uso: my_cli create <project_name> --package com.example.app --name "My App"');
     exit(1);
   }
 
   final command = args[0];
-
   if (command != 'create') {
     print('❌ Comando desconocido: $command');
     exit(1);
@@ -18,7 +17,7 @@ void main(List<String> args) async {
 
   final projectName = args[1];
 
-  // ----------- Parámetros opcionales -----------
+  // Parámetros opcionales
   String packageName = "com.example.$projectName";
   String appName = projectName;
 
@@ -37,15 +36,17 @@ void main(List<String> args) async {
   print('   ➤ App name:       $appName\n');
 
   final targetDir = Directory(projectName);
-
   if (targetDir.existsSync()) {
     print('❌ La carpeta "$projectName" ya existe.');
     exit(1);
   }
 
-  final templateDir = Directory('template');
+  // ---------- Detectar template relativo al script ----------
+  final scriptDir = p.dirname(Platform.script.toFilePath());
+  final templateDir = Directory(p.join(scriptDir, '..', 'template'));
+
   if (!templateDir.existsSync()) {
-    print('❌ ERROR: No se encontró la carpeta /template en la raíz del CLI.');
+    print('❌ No se encontró la carpeta /template en la raíz del CLI.');
     exit(1);
   }
 
@@ -53,7 +54,7 @@ void main(List<String> args) async {
   print('📦 Copiando template...');
   await copyDirectory(templateDir, targetDir);
 
-  // ---------- Reemplazar tokens en archivos de texto ----------
+  // ---------- Reemplazar tokens ----------
   print('🔧 Reemplazando tokens...');
   await replaceTokensInDirectory(targetDir, {
     '{{PROJECT_NAME}}': projectName,
@@ -63,7 +64,6 @@ void main(List<String> args) async {
 
   // ---------- Ejecutar flutter pub get ----------
   print('\n⚙️ Ejecutando flutter pub get...\n');
-
   final result = await Process.run(
     'flutter',
     ['pub', 'get'],
@@ -85,15 +85,11 @@ void main(List<String> args) async {
 // -----------------------------------------------------------
 // Copiar directorios recursivamente
 // -----------------------------------------------------------
-
 Future<void> copyDirectory(Directory source, Directory destination) async {
-  if (!destination.existsSync()) {
-    destination.createSync(recursive: true);
-  }
+  if (!destination.existsSync()) destination.createSync(recursive: true);
 
   await for (final entity in source.list(recursive: false)) {
-    final newPath = '${destination.path}/${entity.uri.pathSegments.last}';
-
+    final newPath = p.join(destination.path, p.basename(entity.path));
     if (entity is Directory) {
       await copyDirectory(entity, Directory(newPath));
     } else if (entity is File) {
@@ -105,36 +101,19 @@ Future<void> copyDirectory(Directory source, Directory destination) async {
 // -----------------------------------------------------------
 // Reemplazar tokens en archivos de texto
 // -----------------------------------------------------------
-
-Future<void> replaceTokensInDirectory(
-  Directory dir,
-  Map<String, String> tokens,
-) async {
-  final allowedExtensions = [
-    '.dart',
-    '.yaml',
-    '.gradle',
-    '.xml',
-    '.json',
-    '.md',
-    '.txt',
-    '.plist',
-  ];
+Future<void> replaceTokensInDirectory(Directory dir, Map<String, String> tokens) async {
+  final allowedExtensions = ['.dart','.yaml','.gradle','.xml','.json','.md','.txt','.plist'];
 
   await for (final entity in dir.list(recursive: true)) {
     if (entity is! File) continue;
 
-    final file = entity;
-    final ext = file.path.split('.').last;
+    final ext = p.extension(entity.path);
+    if (!allowedExtensions.contains(ext)) continue;
 
-    if (!allowedExtensions.contains('.$ext')) continue;
-
-    String content = await file.readAsString();
-
+    String content = await entity.readAsString();
     tokens.forEach((key, value) {
       content = content.replaceAll(key, value);
     });
-
-    await file.writeAsString(content);
+    await entity.writeAsString(content);
   }
 }
