@@ -17,19 +17,19 @@ void main() {
     client = MockHttpClient();
   });
 
-  testWidgets('Inicio de sesión', (WidgetTester tester) async {
+  testWidgets('Change Language', (WidgetTester tester) async {
     await pumpAppWithMocks(tester, client);
-
-    expect(find.text('Login'), findsOne);
-    expect(find.text('Inicio de sesión'), findsNothing);
-
-    await tester.tap(find.byKey(Key('dropdown_languages')));
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(Key('dropdown_languages_es')).last);
-    await tester.pumpAndSettle();
 
     expect(find.text('Login'), findsNothing);
     expect(find.text('Inicio de sesión'), findsOne);
+
+    await tester.tap(find.byKey(Key('dropdown_languages')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(Key('dropdown_languages_en')).last);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Login'), findsOne);
+    expect(find.text('Inicio de sesión'), findsNothing);
 
     when(
       () => client.call<AuthSession, AuthSession>(
@@ -53,6 +53,6 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Home'), findsOne);
-    expect(find.text('Sesión iniciada'), findsOne);
+    expect(find.text('Logged in'), findsOne);
   });
 }

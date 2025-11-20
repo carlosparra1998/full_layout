@@ -1,3 +1,7 @@
+## 1.2.6
+
+- Fix language init
+
 ## 1.2.5
 
 - Fix package versions

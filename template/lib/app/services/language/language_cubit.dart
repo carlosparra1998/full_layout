@@ -12,6 +12,7 @@ class LanguageCubit extends Cubit<LanguageState> {
 
   void initProvider() {
     _locale = Locale('es');
+    emit(LanguageUpdated());
   }
 
   void changeLanguage(Locale newLoc) {
